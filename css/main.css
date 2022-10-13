@@ -1,0 +1,33 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/*space is descendent selector*/
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/*to make the elements spread in the available space*/
+nav ul li{
+    flex: 1;
+}
+
+/*Child combinator - to select only the p elements inside main, but not the descendants. */
+main > p {
+    font-size: 1.25rem;
+}
+
+/*adjacent combinator*/
+h2+p {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+/*Siblings combinator*/
+.stars span:hover ~ span{
+    opacity: .5;
+}
