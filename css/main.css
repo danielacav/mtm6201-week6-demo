@@ -41,3 +41,46 @@ a[href="#"]{
 a[href^="http"] {
     border-left: 4px solid blue;
 }
+
+/*State related pseudo classes
+To add this to elements we should use the following order.
+To remember this, people use LoVE HAte  acronym- (link,visited,hover,focus,active */
+nav a,
+nav a:link,
+nav a:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .5s;
+}
+
+/*The transition should always be assigned to the "regular" state*/
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    transform: scale(1.4);
+}
+
+/*To add a micro interaction so users feel like pressing down a button*/
+nav a:active {
+    transform: scale(1.4) translateX(10px);
+
+}
+
+/*PSEUDO ELEMENTS*/
+a[href$=".pdf"]::after{
+    content: "\2913";
+    font-size: 1.25rem;
+    color: tomato;
+}
+
+h2+p::first-line{
+    color: tomato;
+}
+
+h3+p::first-letter{
+    background-color: aquamarine;
+    color: black;
+    padding: .25rem;
+    margin-right: .10rem;
+}
