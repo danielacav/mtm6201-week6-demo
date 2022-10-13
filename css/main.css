@@ -31,3 +31,13 @@ h2+p {
 .stars span:hover ~ span{
     opacity: .5;
 }
+
+/* [] Attribute selectors
+selecciona un atributo dentro de otro*/
+a[href="#"]{
+    color:tomato;
+}
+
+a[href^="http"] {
+    border-left: 4px solid blue;
+}
